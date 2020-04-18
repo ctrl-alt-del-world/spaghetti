@@ -1,0 +1,8 @@
+.header {
+  padding-top: 1rem;
+  ul, li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+}

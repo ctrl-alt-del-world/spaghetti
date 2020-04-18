@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-user
+renderData:
+  title: "{{user.content.main.name}}"
+---
+
+{% set title = user.content.main.name %}
+
+<div class='mt1 pt1'>
+  <h1>{{ title }}</h1>
+</div>

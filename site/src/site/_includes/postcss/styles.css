@@ -13,6 +13,7 @@
 @import 'lib/_containers.css';
 @import 'lib/_syntax.css';
 @import 'lib/_typography.css';
+@import 'lib/_borders.css';
 @import 'lib/_grid.css';
 
 @import 'components/_header.css';
@@ -39,7 +40,7 @@
 
 .main {
   min-height: calc(100vh - 160px);
-  max-width: 1000px;
+  /* max-width: 1000px; */
 }
 
 .m-hide {

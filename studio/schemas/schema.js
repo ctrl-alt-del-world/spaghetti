@@ -21,6 +21,8 @@ import studioModule from './modules/studioModule'
 import projectModule from './modules/projectModule'
 import linkedProjects from './modules/linkedProjects'
 import singleProject from './modules/singleProject'
+import location from './modules/location'
+import discipline from './modules/discipline'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -43,6 +45,8 @@ export default createSchema({
     studioModule,
     projectModule,
     linkedProjects,
+    location,
+    discipline,
     singleProject
   ])
 })

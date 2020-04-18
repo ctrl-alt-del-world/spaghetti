@@ -3,6 +3,16 @@ export default {
   name: 'projectModule',
   type: 'object',
   // hidden: true,
+  fieldsets: [
+    {
+      name: 'media',
+      title: 'Project Media',
+      options: {
+        collapsible: true,
+        collapsed: true
+      }
+    },
+  ],
   fields: [
     {
       name: 'name',
@@ -23,6 +33,15 @@ export default {
         maxLength: 96
       },
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'image',
+      type: 'image',
+      title: 'Project Card',
+      options: {
+        hotspot: true
+      },
+      fieldset: 'media'
     }
   ]
 }

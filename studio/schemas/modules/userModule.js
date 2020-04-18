@@ -3,6 +3,16 @@ export default {
   name: 'userModule',
   type: 'object',
   // hidden: true,
+  fieldsets: [
+    {
+      name: 'info',
+      title: 'User Info',
+      options: {
+        collapsible: true,
+        collapsed: true
+      }
+    },
+  ],
   fields: [
     {
       name: 'name',
@@ -20,9 +30,20 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      type: 'location',
+      name: 'location',
+      fieldset: 'info'
+    },
+    { 
+      type: 'discipline',
+      name: 'discipline',
+      fieldset: 'info'
+    },
+    {
       name: 'url',
       title: 'Personal Website',
-      type: 'url'
+      type: 'url',
+      fieldset: 'info'
     }
   ]
 }

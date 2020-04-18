@@ -13,6 +13,7 @@
 @import 'lib/_containers.css';
 @import 'lib/_syntax.css';
 @import 'lib/_typography.css';
+@import 'lib/_grid.css';
 
 @import 'components/_header.css';
 @import 'components/_rows.css';

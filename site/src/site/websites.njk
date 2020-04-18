@@ -4,14 +4,21 @@ layout: layouts/base.njk
 ---
 
 
-<div class='projects mt1 pt1'>
+<div class='projects mt1 pt1 fw f jcb aic'>
   {%- for project in projects -%}
-    <div class='row x'>
-      <span>
-        <a href='/projects/{{ project.content.main.slug.current | slug }}/'>{{ project.content.main.name  }}</a>
-        {% if project.content.main.url %}<a class='' href='{{ project.content.main.url }}' target='_blank'>⬀</a>{% endif %}
-      </span>
+    <div class='projects--single mb1 x col-3'>
+      <a href='/projects/{{ project.content.main.slug.current | slug }}/'>
+        <img class='block x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+      </a>
+      <div>
+        <span>
+          <a href='/projects/{{ project.content.main.slug.current | slug }}/'>{{ project.content.main.name  }}</a>
+          {% if project.content.main.url %}<a class='' href='{{ project.content.main.url }}' target='_blank'>⬀</a>{% endif %}
+        </span>
+      </div>
     </div>
   {%- endfor -%}
+  <div />
+  <div />
 </div>
 

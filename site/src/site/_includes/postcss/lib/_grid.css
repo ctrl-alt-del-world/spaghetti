@@ -1,0 +1,8 @@
+.col-3 {
+  @media (min-width: $mid) {
+    width: calc(50% - 1rem);
+  }
+  @media (min-width: $wide) {
+    width: calc(33.333% - 1rem);
+  }
+}

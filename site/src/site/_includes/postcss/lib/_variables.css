@@ -1,7 +1,7 @@
 /* breakpoints for media queries */
 $narrow: 400px;
 $mid: 740px;
-$wide: 1200px;
+$wide: 1000px;
 
 /* colours */
 $page-color: #000;

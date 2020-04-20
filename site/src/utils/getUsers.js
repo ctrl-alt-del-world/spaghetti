@@ -13,10 +13,14 @@ function generateUser (user) {
 async function getUsers () {
   const filter = groq`*[_type == "user"] {
     ...,
-    projects[]-> {
+    content {
       ...,
-      project[] {
-        ...
+      projects[] {
+        ...,
+        project-> {
+          ...,
+          'image': content.main.image.asset->
+        }
       }
     }
   }`

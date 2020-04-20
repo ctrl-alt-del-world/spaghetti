@@ -7,6 +7,9 @@ body {
   min-height: 100vh;
 }
 
+.medium {
+  font-weight: 600;
+}
 
 h1, h2, h3 {
   font-weight: 600;

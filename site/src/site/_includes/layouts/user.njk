@@ -9,4 +9,21 @@ renderData:
 
 <div class='mt1 pt1'>
   <h1>{{ title }}</h1>
+  <div class='f projects fw mt1 pt1 jcb x aic'>
+    {%- for project in user.content.projects -%}
+      {% set projectInfo = project.project.content %}
+      <div class='projects--single mba1 x col-4'>
+        <a class='projects--single_image block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
+          <img class='block x' src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
+        </a>
+        <h4 class='mt05'>{{projectInfo.main.name}}</h4>
+        <div>
+          <span class='medium'>Roles</span>: {{project.discipline}}
+        </div>
+      </div>
+    {%- endfor -%}
+
+    <div class=' x col-4'></div>
+    <div class=' x col-4'></div>
+  </div>
 </div>

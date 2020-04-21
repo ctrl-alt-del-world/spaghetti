@@ -31,6 +31,13 @@ h1 {
   };
 }
 
+a {
+  color: black;
+  &:hover {
+    color: blue;
+  }
+}
+
 p {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -43,3 +50,6 @@ ul, ol {
   }
 }
 
+.caps {
+  text-transform: uppercase;
+}

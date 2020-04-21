@@ -10,7 +10,8 @@ renderData:
 <div class='mt1 pt1'>
   <h1>{{ title }} {% if project.content.main.url %}<a class='' href='{{ project.content.main.url }}' target='_blank'>⬀</a>{% endif %}</h1>
   <div class='project__flex f fw jcb ais x'>
-    <div class='project__info'>
+    <div class='project__info bcb cw'>
+      <h4 class='ac mt05 caps'>Project Info</h4>
       {{project.info | markdownify | safe }}
     </div>
     <div class='x project__images'>

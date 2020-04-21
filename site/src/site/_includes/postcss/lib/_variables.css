@@ -10,3 +10,10 @@ $text-color: #fff;
 $accent-color: #27a4de;
 $dark-color: #000;
 
+.bcb {
+  background-color: black;
+}
+
+.cw {
+  color: white;
+}

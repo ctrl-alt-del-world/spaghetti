@@ -1,7 +1,7 @@
 .project {
   &__single {
     &-image {
-      max-width: 800px;
+      /* max-width: 800px; */
       margin-bottom: 2rem;
       border: 4px solid blue;
     }
@@ -9,7 +9,11 @@
   &__info {
     border: 2px solid black;
     padding: 0.5rem 1.5rem;
-    box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
+    margin-top: 2rem;
+    @media (min-width: $mid) {
+      margin-top: 0;
+      box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
+    }
     h4 {
       border-bottom: 1px solid currentColor;
       padding-bottom: 0.5rem;

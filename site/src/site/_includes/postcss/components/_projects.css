@@ -1,0 +1,26 @@
+.project {
+  &__single {
+    &-image {
+      max-width: 800px;
+      margin-bottom: 2rem;
+      border: 4px solid blue;
+    }
+  }
+  &__info {
+    border: 2px solid black;
+    padding: 0.5rem 1.5rem;
+  }
+  &__flex {
+    @media (min-width: $mid) {
+      flex-direction: row-reverse;
+      margin-top: 2rem;
+      .project__info {
+        width: 30%;
+        margin-right: 4%;
+      }
+      .project__images {
+        width: 60%;
+      }
+    }
+  }
+}

@@ -42,6 +42,37 @@ export default {
         hotspot: true
       },
       fieldset: 'media'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+          marks: {
+            annotations: [
+              {
+                name: 'internalLink',
+                type: 'object',
+                title: 'Internal link',
+                fields: [
+                  {
+                    name: 'reference',
+                    type: 'reference',
+                    title: 'Reference',
+                    to: [
+                      { type: 'user' },
+                      { type: 'studio' }
+                      // other types you may want to link to
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

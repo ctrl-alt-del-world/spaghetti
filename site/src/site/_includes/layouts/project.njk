@@ -8,5 +8,13 @@ renderData:
 {% set title = project.content.main.name %}
 
 <div class='mt1 pt1'>
-  Site: <h1>{{ title }}</h1>
+  <h1>{{ title }} {% if project.content.main.url %}<a class='' href='{{ project.content.main.url }}' target='_blank'>⬀</a>{% endif %}</h1>
+  <div class='project__flex f fw jcb ais x'>
+    <div class='project__info'>
+      {{project.info | markdownify | safe }}
+    </div>
+    <div class='x project__images'>
+      <img class='block project__single-image x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+    </div>
+  </div>
 </div>

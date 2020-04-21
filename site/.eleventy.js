@@ -18,6 +18,27 @@ module.exports = function(config) {
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
 
+  let markdownIt = require("markdown-it");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let opts = {
+    permalink: true,
+    permalinkClass: "direct-link",
+    permalinkSymbol: "#"
+  };
+
+  config.setLibrary("md", markdownIt(options)
+    .use(markdownItAnchor, opts)
+  );
+
+  config.addFilter("markdownify", function(value) {
+    const md = new markdownIt(options)
+    return md.render(value)
+  })
 
   // add support for syntax highlighting
   config.addPlugin(syntaxHighlight);

@@ -17,6 +17,7 @@
 @import 'lib/_grid.css';
 
 @import 'components/_header.css';
+@import 'components/_projects.css';
 @import 'components/_rows.css';
 
 * {

@@ -40,3 +40,20 @@
     }
   }
 }
+
+.projects--single {
+  &_image {
+    position: relative;
+    height: 0;
+    padding-bottom: 68%;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-position: center center;
+    }
+  }
+}

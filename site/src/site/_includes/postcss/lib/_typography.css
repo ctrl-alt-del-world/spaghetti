@@ -34,7 +34,7 @@ h1 {
 a {
   color: black;
   &:hover {
-    color: blue;
+    color: rgba(182, 61, 44, 1);
   }
 }
 

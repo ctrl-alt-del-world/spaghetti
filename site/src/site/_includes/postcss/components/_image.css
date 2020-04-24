@@ -1,0 +1,12 @@
+.image {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.5s;
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.projects--single_image {
+  background-color: rgba(182, 61, 44, 1);
+}

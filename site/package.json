@@ -1,8 +1,8 @@
 {
-  "name": "EleventyOne",
-  "version": "3.0.0",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for PostCSS, JavaScript, and serverless functions",
-  "author": "Phil Hawksworth",
+  "name": "spaghetti",
+  "version": "1.0.0",
+  "description": "spaghetti directory",
+  "author": "Kevin Green",
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",

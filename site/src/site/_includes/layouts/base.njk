@@ -15,12 +15,7 @@
       </div>
       {% include "footer.njk" %}
     </div>
-
-    {% set js %}
-      {% include "js/core.js" %}
-      {% include "js/hello.js" %}
-    {% endset %}
-    <script>{{ js | jsmin | safe }}</script>
+    <script src='/scripts/index.js'></script>
   </body>
 </html>
 

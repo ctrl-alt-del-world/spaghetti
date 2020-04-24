@@ -11,7 +11,7 @@ pagination:
   {%- for project in pagination.items %}
     <div class='projects--single mb1 x col-4'>
       <a class='projects--single_image block ba' href='/projects/{{ project.content.main.slug.current | slug }}/'>
-        <img class='block x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+        <img class='block image x' data-component='image' data-src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
       </a>
       <div>
         <span>

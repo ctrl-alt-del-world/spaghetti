@@ -3,7 +3,11 @@
     &-image {
       /* max-width: 800px; */
       margin-bottom: 2rem;
-      border: 4px solid blue;
+      /* border: 8px solid blue; */
+      border: 1px solid rgba(0,0,0,0.5);
+      @media (min-width: $mid) {
+        box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
+      }
     }
   }
   &__info {
@@ -35,7 +39,7 @@
       }
       
       .project__images {
-        width: 60%;
+        width: 64%;
       }
     }
   }
@@ -46,6 +50,7 @@
     position: relative;
     height: 0;
     padding-bottom: 68%;
+    margin-bottom: 10px;
     img {
       object-fit: cover;
       height: 100%;

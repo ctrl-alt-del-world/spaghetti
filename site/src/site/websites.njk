@@ -10,7 +10,7 @@ pagination:
 <div class='projects mt1 pt1 fw f jcb aic'>
   {%- for project in pagination.items %}
     <div class='projects--single mb1 x col-4'>
-      <a class='projects--single_image block ba' href='/projects/{{ project.content.main.slug.current | slug }}/'>
+      <a class='projects--single_image block x ba' href='/projects/{{ project.content.main.slug.current | slug }}/'>
         <img class='block image x' data-component='image' data-src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
       </a>
       <div>

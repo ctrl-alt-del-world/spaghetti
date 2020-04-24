@@ -15,7 +15,18 @@ renderData:
       {{project.info | markdownify | safe }}
     </div>
     <div class='x project__images'>
-      <img class='block project__single-image x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+      {% if project.video %}
+        <video class='block x project__single-image mb1' autoplay='true'>
+          <source src="{{project.video}}" />
+        </video>
+      {% else %}
+        <img class='block project__single-image x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+      {% endif %}
+      <div>
+        {% for screen in project.content.main.siteScreens %}
+          <img class='block project__single-image x' src="{{screen.image.url}}?w=900" alt="{{project.cotent.main.name}}" />
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

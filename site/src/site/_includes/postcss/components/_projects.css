@@ -50,7 +50,7 @@
   &_image {
     position: relative;
     height: 0;
-    padding-bottom: 68%;
+    padding-bottom: 56%;
     margin-bottom: 10px;
     img {
       object-fit: cover;

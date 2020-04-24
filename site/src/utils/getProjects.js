@@ -14,10 +14,15 @@ async function getProjects () {
   const filter = groq`*[_type == "project"]{
     ...,
     'image': content.main.image.asset->,
+    'video': content.main.video.asset->url,
   	content {
       ...,
       main {
         ...,
+        siteScreens[] {
+          ...,
+          'image': asset->
+        },
         description[] {
           ...,
           markDefs[]{

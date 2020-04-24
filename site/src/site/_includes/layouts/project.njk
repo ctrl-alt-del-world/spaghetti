@@ -16,7 +16,7 @@ renderData:
     </div>
     <div class='x project__images'>
       {% if project.video %}
-        <video class='block x project__single-image mb1' autoplay='true'>
+        <video class='block x project__single-image mb1' autoplay='true' poster="{{project.image.url}}?h=500">
           <source src="{{project.video}}" />
         </video>
       {% else %}

@@ -44,6 +44,29 @@ export default {
       fieldset: 'media'
     },
     {
+      name: 'video',
+      type: 'file',
+      title: 'Project Video',
+      options: {
+        hotspot: true
+      },
+      fieldset: 'media'
+    },
+    {
+      name: 'siteScreens',
+      title: 'Site Screens',
+      type: 'array',
+      of: [
+        {
+          type: 'image'
+        }
+      ],
+      options: {
+        layout: 'grid'
+      },
+      fieldset: 'media'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',

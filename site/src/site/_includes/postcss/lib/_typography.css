@@ -33,8 +33,23 @@ h1 {
 
 a {
   color: black;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
   &:hover {
     color: rgba(182, 61, 44, 1);
+  }
+  &:focus {
+    outline: none;
+    &:before {
+      content: '';
+      width: calc(100% + 8px);
+      height: calc(100% + 6px);
+      position: absolute;
+      top: -3px;
+      left: -4px;
+      border: 2px dashed rgba(182, 61, 44, 1);
+    }
   }
 }
 

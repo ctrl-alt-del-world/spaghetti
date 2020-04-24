@@ -12,7 +12,7 @@ renderData:
   <div class='f projects fw mt1 pt1 jcb x aic'>
     {%- for project in user.content.projects -%}
       {% set projectInfo = project.project.content %}
-      <div class='projects--single mba1 x col-4'>
+      <div class='projects--single mb1 x col-4'>
         <a class='projects--single_image block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
           <img class='block x' src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
         </a>

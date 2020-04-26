@@ -9,23 +9,38 @@ renderData:
 
 <div class='mt1 pt1'>
   <h1>{{ title }}</h1>
-  <div class='f projects fw mt1 pt1 jcb x aic'>
-    {%- for project in user.content.projects -%}
-      {% set projectInfo = project.project.content %}
-      <div class='projects--single mb1 x col-4'>
-        <a class='projects--single_image x block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
-          <img class='block x'  data-component='image' data-src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
-        </a>
-        <h4 class='mt05'>{{projectInfo.main.name}}</h4>
-        <div>
-          <span class='medium'>Roles</span>: {{project.discipline}}
-        </div>
-      </div>
-    {% else %}
-      <p>Didn't find any of that internet</p>
-    {%- endfor -%}
+  <div class='f jcb ais user__flex fw'>
 
-    <div class=' x col-4'></div>
-    <div class=' x col-4'></div>
+    <div class='mt1 x pt1 {% if user.friends %}user__friends-active{% endif %}'>
+      <h4 class='m0 p0'>Projects</h4>
+      <div class='f projects fw mt1 jcb x aic'>
+        {%- for project in user.content.projects -%}
+          {% set projectInfo = project.project.content %}
+          <div class='projects--single mb1 x col-4'>
+            <a class='projects--single_image x block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
+              <img class='block x'  data-component='image' data-src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
+            </a>
+            <h4 class='mt05'>{{projectInfo.main.name}}</h4>
+            <div>
+
+              <span class='medium'>Roles</span>: {{project.discipline}}
+            </div>
+          </div>
+        {% else %}
+          <p>Didn't find any of that internet</p>
+        {%- endfor -%}
+
+        <div class=' x col-4'></div>
+        <div class=' x col-4'></div>
+      </div>
+    </div>
+    {% if user.friends %}
+      <div class='x user__friends bcb cw'>
+        <h3 class='mt0 pt0 pb1'>Known Internet Associates</h3>
+        {% for friend in user.friends %}
+          <a href='/users/{{friend.slug.current}}'>{{friend.name}}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>

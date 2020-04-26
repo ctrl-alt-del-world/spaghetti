@@ -20,6 +20,7 @@
 @import 'components/_image.css';
 @import 'components/_projects.css';
 @import 'components/_rows.css';
+@import 'components/_user.css';
 
 * {
   margin: 0;

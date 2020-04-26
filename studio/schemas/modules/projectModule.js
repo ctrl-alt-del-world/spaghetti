@@ -67,6 +67,17 @@ export default {
       fieldset: 'media'
     },
     {
+      name: 'launchDate',
+      type: 'date',
+      title: 'Launch Date'
+    },
+    {
+      name: 'linkedUsers',
+      type: 'array',
+      tile: 'Linked Users',
+      of: [{ type: 'reference', to: [{ type: 'user' }] }]
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',

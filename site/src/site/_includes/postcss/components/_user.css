@@ -1,0 +1,23 @@
+.user {
+  &__friends {
+    display: none;
+
+    @media (min-width: $mid) {
+      display: block;
+      width: 30%;
+      padding: 1.5rem;
+      margin-right: 10px;
+      margin-top: 62px;
+      box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
+      &-active {
+        width: 64%;
+      }
+      a {
+        color: #47b738;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

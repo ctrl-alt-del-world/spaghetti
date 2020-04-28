@@ -37,6 +37,7 @@ function generateUser (user) {
   }
 }
 
+
 async function getUsers () {
   const filter = groq`*[_type == "user"] {
     ...,

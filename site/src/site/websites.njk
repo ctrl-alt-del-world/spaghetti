@@ -11,7 +11,7 @@ pagination:
   {%- for project in pagination.items %}
     <div class='projects--single mb1 x col-4'>
       <a class='projects--single_image block x ba' href='/projects/{{ project.content.main.slug.current | slug }}/'>
-        <img class='block image x' data-component='image' data-src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+        <img class='block image x' data-component='image' data-src="{{project.image.url}}?h=300" alt="{{project.cotent.main.name}}" />
       </a>
       <div>
         <span>
@@ -24,6 +24,7 @@ pagination:
   <div class=' x col-4'></div>
   <div class=' x col-4'></div>
 </div>
+
 
 {% if pagination.pageLinks.length > 1 %}
   <nav class='mt1 f jcc aic'>

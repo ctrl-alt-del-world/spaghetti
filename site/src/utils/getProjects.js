@@ -11,7 +11,7 @@ function generateProject (project) {
 }
 
 async function getProjects () {
-  const filter = groq`*[_type == "project"]{
+  const filter = groq`*[_type == "project"] | order(content.main.launchDate desc) {
     ...,
     'image': content.main.image.asset->,
     'video': content.main.video.asset->url,

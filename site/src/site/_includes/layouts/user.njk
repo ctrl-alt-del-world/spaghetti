@@ -11,7 +11,7 @@ renderData:
   <h1>{{ title }}</h1>
   <div class='f jcb ais user__flex fw'>
 
-    <div class='mt1 x pt1 {% if user.friends %}user__friends-active{% endif %}'>
+    <div class='mt1 x pt1 {% if user.friends.length > 0 %}user__friends-active{% endif %}'>
       <h4 class='m0 p0'>Projects</h4>
       <div class='f projects fw mt1 jcb x aic'>
         {%- for project in user.content.projects -%}
@@ -34,7 +34,7 @@ renderData:
         <div class=' x col-4'></div>
       </div>
     </div>
-    {% if user.friends %}
+    {% if user.friends.length > 0 %}
       <div class='x user__friends bcb cw'>
         <h3 class='mt0 pt0 pb1'>Known Internet Associates</h3>
         {% for friend in user.friends %}

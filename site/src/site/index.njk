@@ -9,7 +9,7 @@ layout: layouts/base.njk
     <div class='row x'>
       <span>
         <a href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
-        {% if user.content.main.url %}<a class='' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
+        {% if user.content.main.url %}<a class='' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
       </span>
     </div>
   {%- endfor -%}

@@ -1,6 +1,6 @@
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
+const pluginPWA = require("eleventy-plugin-pwa");
 
 module.exports = function(config) {
 
@@ -14,6 +14,8 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
+  // service workers
+  config.addPlugin(pluginPWA);
   // Add some utility filters
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );

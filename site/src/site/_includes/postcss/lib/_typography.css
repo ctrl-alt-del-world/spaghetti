@@ -18,17 +18,14 @@ h1, h2, h3 {
   line-height: 1;
 }
 h1 {
-  font-size: 3em;
+  font-size: 1.2em;
   margin-top:0.4em;
   margin-bottom:0.2em;
-  line-height: 1;
+  line-height: 1.4;
+}
 
-  @media (min-width: $mid) {
-    font-size: 1em;
-  };
-  @media (min-width: $wide) {
-    font-size: 3em;
-  };
+.subtitle {
+  margin-top: 30px;
 }
 
 a {

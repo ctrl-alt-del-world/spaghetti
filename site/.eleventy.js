@@ -15,7 +15,9 @@ module.exports = function(config) {
   config.addLayoutAlias('default', 'layouts/base.njk');
 
   // service workers
-  config.addPlugin(pluginPWA);
+  if (env !== 'dev') {
+    config.addPlugin(pluginPWA);
+  }
   // Add some utility filters
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
@@ -32,6 +34,8 @@ module.exports = function(config) {
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
   };
+
+  console.log('envvv', env)
 
   config.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)

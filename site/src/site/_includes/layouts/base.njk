@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>{{ renderData.title or title }}</title>
     <script>
-      if ("serviceWorker" in navigator)
+      if ("serviceWorker" in navigator && !/localhost/.test(document.location.href)) {
         navigator.serviceWorker.register("/service-worker.js");
+      }
     </script> 
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>

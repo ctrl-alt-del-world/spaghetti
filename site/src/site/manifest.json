@@ -7,10 +7,14 @@
       "sizes": "64x64",
       "type": "image/png"
     },
-
     {
       "src": "/images/favicon192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/iconLarge.png",
+      "sizes": "640x640",
       "type": "image/png"
     }
   ],

@@ -14,6 +14,8 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
+  config.addPassthroughCopy("./src/site/manifest.json");
+
   // service workers
   if (env !== 'dev') {
     config.addPlugin(pluginPWA);

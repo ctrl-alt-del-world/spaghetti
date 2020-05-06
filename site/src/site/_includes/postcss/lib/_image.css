@@ -10,7 +10,6 @@
   max-width:           100%;
   mix-blend-mode:      multiply;
   object-fit:          cover;
-  opacity:             0.86 !important;
   position:            relative;
   width:               100%;
 }

@@ -1,9 +1,5 @@
 .ba {
   /* border: 8px solid blue; */
   transition: all 0.3s ease-in-out;
-  border: 1px solid rgba(182, 61, 44, 0.5);
-  box-shadow: 4px 4px 0px 0 rgba(0,0,0,0.2);
-  &:hover {
-    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.2);
-  }
+  border: 1px solid currentColor;
 }

@@ -20,7 +20,8 @@ renderData:
           {% set projectInfo = project.project.content %}
           <div class='projects--single mb1 x col-4'>
             <a class='projects--single_image x block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
-              <img class='block x'  data-component='image' data-src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
+
+              <div class='block y abs top left project__single-blend x' style="background-image: url({{project.project.image.url}}?h=500)" alt="{{projectInfo.main.name}}"></div>
             </a>
             <h4 class='mt05'>{{projectInfo.main.name}}</h4>
             <div>
@@ -40,7 +41,7 @@ renderData:
       <div class='x user__friends'>
         <h3 class='mt0 pt0 pb1'>Known Internet Associates</h3>
         {% for friend in user.friends %}
-          <a class='border' href='/users/{{friend.slug.current}}'>{{friend.name}}</a>
+          <a class='border mb05' href='/users/{{friend.slug.current}}'>{{friend.name}}</a>
         {% endfor %}
       </div>
     {% endif %}

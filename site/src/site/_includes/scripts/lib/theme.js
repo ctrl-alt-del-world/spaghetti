@@ -1,7 +1,6 @@
 import { component } from 'picoapp'
 
 export default component((node) => {
-  console.log('lets pico it udddp')
   const buttons = node.querySelectorAll('.js-color')
   const colors = node.querySelector('.js-toggle-colors')
   const close = node.querySelector('.js-toggle-close')
@@ -29,7 +28,6 @@ export default component((node) => {
         b.classList.remove('active')
       })
       button.classList.add('active')
-      console.log('click it up')
       const dark = button.dataset.background
       const lite = button.dataset.color
       inputLite.value = dark
@@ -52,6 +50,9 @@ export default component((node) => {
       }
       .toggle__colors-close {
         color: ${inputLite.value};
+      }
+      .project__single-blend {
+        background-color: ${inputDark.value};
       }
       .alt {
         background-color: ${inputDark.value};

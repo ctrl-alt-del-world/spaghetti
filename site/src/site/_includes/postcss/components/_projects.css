@@ -4,28 +4,31 @@
       /* max-width: 800px; */
       margin-bottom: 2rem;
       /* border: 8px solid blue; */
-      border: 1px solid rgba(182, 61, 44, 0.5);
-      @media (min-width: $mid) {
-        box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
-      }
+      border: 1px solid currentColor;
+    }
+    &-blend {
+      background-position: center center;
+      background-size: cover;
+      background-blend-mode: multiply;
     }
   }
   &__info {
-    border: 2px solid black;
     padding: 0.5rem 1.5rem;
     margin-top: 2rem;
     @media (min-width: $mid) {
       margin-top: 0;
-      box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2);
+      /* box-shadow: 10px 10px 0px 0 rgba(0,0,0,0.2); */
     }
     h4 {
-      border-bottom: 1px solid currentColor;
       padding-bottom: 0.5rem;
     }
     a {
-      color: rgba(71, 183, 56, 1);
+      border: 1px solid currentColor; 
+      border-radius: 14px;
+      padding: 4px 10px;
       &:hover {
-        color: white;
+        background-color: #FFCC19;
+        color: #FD4A1E;
       }
     }
   }

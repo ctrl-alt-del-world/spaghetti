@@ -8,7 +8,9 @@ renderData:
 {% set title = user.content.main.name %}
 
 <div class='mt1 user pt1'>
-  <h1>{{ title }}</h1>
+  <div class='ac'>
+    <h1 class='caps'>{{ title }}</h1>
+  </div>
   <div class='f jcb ais user__flex fw'>
 
     <div class='mt1 x pt1 {% if user.friends.length > 0 %}user__friends-active{% endif %}'>
@@ -35,10 +37,10 @@ renderData:
       </div>
     </div>
     {% if user.friends.length > 0 %}
-      <div class='x user__friends bcb cw'>
+      <div class='x user__friends'>
         <h3 class='mt0 pt0 pb1'>Known Internet Associates</h3>
         {% for friend in user.friends %}
-          <a href='/users/{{friend.slug.current}}'>{{friend.name}}</a>
+          <a class='border' href='/users/{{friend.slug.current}}'>{{friend.name}}</a>
         {% endfor %}
       </div>
     {% endif %}

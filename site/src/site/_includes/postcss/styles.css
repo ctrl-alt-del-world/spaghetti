@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap');
 
 @import '../../../../node_modules/svbstrate/src/lib/reset.css';
 @import '../../../../node_modules/svbstrate/src/lib/display.css';
@@ -28,9 +28,6 @@
   padding: 0;
 }
 
-body, html {
-  background-color:rgba(247,247,88,1);
-}
 
 ::-moz-selection {
   background-color: $text-color;

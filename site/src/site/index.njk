@@ -8,7 +8,7 @@ layout: layouts/base.njk
   {%- for user in users -%}
     <div class='row ac x'>
       <span>
-        <a class='h2' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
+        <a class='h2 caps underline-hover' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
         {% if user.content.main.url %}<a class='' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
       </span>
     </div>

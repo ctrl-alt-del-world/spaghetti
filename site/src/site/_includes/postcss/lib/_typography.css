@@ -96,7 +96,17 @@ a {
       position: absolute;
       top: -3px;
       left: -4px;
-      border: 2px dashed #DA5E50;
+      border: 2px dashed currentColor;
+    }
+  }
+  &.h2 {
+    &:focus {
+      &:before {
+        @media (min-width: $mid) {
+          height: calc(100% + 10px);
+          top: -10px;
+        }
+      }
     }
   }
 }

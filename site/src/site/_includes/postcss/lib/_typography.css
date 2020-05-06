@@ -42,8 +42,9 @@ h2, .h2 {
 }
 
 a {
-  color: black;
+  color: currentColor;
   line-height: 1;
+  text-decoration: none;
   position: relative;
   display: inline-block;
   &:hover {

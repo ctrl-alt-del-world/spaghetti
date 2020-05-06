@@ -5,4 +5,9 @@
     padding-left: 0;
     margin-left: 0;
   }
+  &__logo {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

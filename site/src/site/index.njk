@@ -4,11 +4,11 @@ subtitle: An interent webring for the 🍝 fam.
 layout: layouts/base.njk
 ---
 
-<div class='users mt1 pt1'>
+<div class='users mt1 pt1 mb1 pb1'>
   {%- for user in users -%}
-    <div class='row x'>
+    <div class='row ac x'>
       <span>
-        <a href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
+        <a class='h2' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
         {% if user.content.main.url %}<a class='' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
       </span>
     </div>

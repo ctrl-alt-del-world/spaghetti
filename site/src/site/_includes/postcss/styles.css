@@ -20,6 +20,7 @@
 @import 'components/_image.css';
 @import 'components/_projects.css';
 @import 'components/_rows.css';
+@import 'components/_footer.css';
 @import 'components/_user.css';
 
 * {
@@ -46,8 +47,7 @@ body, html {
 }
 
 .main {
-  min-height: calc(100vh - 160px);
-  /* max-width: 1000px; */
+  padding-top: 4rem;
 }
 
 .m-hide {
@@ -55,4 +55,14 @@ body, html {
   @media (min-width: $mid) {
     display: block;
   }
+}
+
+body {
+  background-color: #FD4A1E;
+  color: #FFCC19
+}
+
+.alt {
+  color: #FD4A1E;
+  background-color: #FFCC19
 }

@@ -19,6 +19,7 @@
 @import 'components/_header.css';
 @import 'components/_image.css';
 @import 'components/_projects.css';
+@import 'components/_toggle.css';
 @import 'components/_rows.css';
 @import 'components/_footer.css';
 @import 'components/_user.css';
@@ -47,19 +48,13 @@
   padding-top: 4rem;
 }
 
+.site__why {
+  padding-bottom: 4rem;
+}
+
 .m-hide {
   display: none;
   @media (min-width: $mid) {
     display: block;
   }
-}
-
-body {
-  background-color: #FD4A1E;
-  color: #FFCC19
-}
-
-.alt {
-  color: #FD4A1E;
-  background-color: #FFCC19
 }

@@ -1,7 +1,21 @@
 <header class='header fix x p1 left top'>
   <div class='nav f jcb rel aic'>
-    <div>
+    <div class='f jcs aic rel'>
+      <div class='toggle__colors js-colors mr1'>
+        <button class='toggle__colors-1 js-color active' data-color='#FFCC19' data-background='#FD4A1E'></button>
+        <button class='toggle__colors-2 js-color' data-color='#FD4A1E' data-background='#FFCC19'></button>
+      </div>
       <a href="/why" class='caps'>about</a>
+      <div class='toggle__colors-open js-toggle-colors abs alt left'>
+        <button class='abs top right toggle__colors-close js-toggle-close'>
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+            <line x1="1.35355" y1="0.646447" x2="16.3536" y2="15.6464" stroke="currentColor"/>
+            <line x1="0.646447" y1="15.6464" x2="15.6464" y2="0.646447" stroke="currentColor"/>
+          </svg>
+        </button>
+        <p class='caps m0 p0 mr1 f jcs aic'><span>Light</span> <input type='text' name='colorLite' class='js-lite' value='#FD4AIE' />
+        <p class='caps m0 p0 mr1 f jcs aic'><span>Dark</span> <input type='text' name='colorDark' class='js-dark' value='#FFCC19' />
+      </div>
     </div>
     <div>
       <a class='caps header__logo abs' href='/'>Spaghetti</a>
@@ -16,4 +30,3 @@
     </ul>
   </div>
 </header>
-d

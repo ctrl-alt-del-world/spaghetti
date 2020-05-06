@@ -1,4 +1,5 @@
 .user {
+  min-height: 70vh;
   h1 {
     padding-bottom: 20px;
     @media (min-width: $mid) {

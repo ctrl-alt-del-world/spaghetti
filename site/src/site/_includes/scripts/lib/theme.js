@@ -38,7 +38,6 @@ export default component((node) => {
   })
 
   const handleColorCSS = () => {
-    console.log('css gods?', inputLite.value, inputDark.value)
     const newStyle = `
       body {
         background-color: ${inputLite.value};
@@ -57,6 +56,12 @@ export default component((node) => {
       .alt {
         background-color: ${inputDark.value};
         color: ${inputLite.value};
+      }
+      .projects--single_image {
+        background-color: ${inputDark.value};
+      }
+      .footer .newsletter button:hover span {
+        color: ${inputDark.value};
       }
     `
     styles.innerHTML = newStyle;

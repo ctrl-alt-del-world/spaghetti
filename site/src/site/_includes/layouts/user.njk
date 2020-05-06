@@ -20,8 +20,7 @@ renderData:
           {% set projectInfo = project.project.content %}
           <div class='projects--single mb1 x col-4'>
             <a class='projects--single_image x block ba' href='/projects/{{ projectInfo.main.slug.current | slug }}/'>
-
-              <div class='block y abs top left project__single-blend x' style="background-image: url({{project.project.image.url}}?h=500)" alt="{{projectInfo.main.name}}"></div>
+             <img class='block x'  data-component='image' data-src="{{project.project.image.url}}?h=500" alt="{{projectInfo.main.name}}" />
             </a>
             <h4 class='mt05'>{{projectInfo.main.name}}</h4>
             <div>

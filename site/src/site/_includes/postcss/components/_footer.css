@@ -1,3 +1,37 @@
 .footer {
   margin-top: 3rem;
+  padding: 3rem 0 0;
+  .newsletter {
+    padding-bottom: 3rem;
+    @media (min-width: $mid) {
+      padding: 5rem 0;
+    }
+    form {
+      margin-top: 1.5rem;
+    }
+    input {
+      border: none;
+      color: currentColor;
+      width: 70%;
+      border-bottom: 1px solid currentColor;
+      &::placeholder {
+        color: currentcolor;
+      }
+    }
+    button {
+      border: 1px solid currentColor;
+      background-color: transparent;
+      color: currentColor;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: currentColor;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }

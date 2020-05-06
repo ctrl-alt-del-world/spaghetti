@@ -12,6 +12,7 @@
 @import 'lib/_variables.css';
 @import 'lib/_containers.css';
 @import 'lib/_syntax.css';
+@import 'lib/_image.css';
 @import 'lib/_typography.css';
 @import 'lib/_borders.css';
 @import 'lib/_grid.css';
@@ -50,6 +51,7 @@
 
 .site__why {
   padding-bottom: 4rem;
+  min-height: 70vh;
 }
 
 .m-hide {

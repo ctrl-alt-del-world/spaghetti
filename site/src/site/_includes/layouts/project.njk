@@ -16,15 +16,28 @@ renderData:
     </div>
     <div class='x project__images'>
       {% if project.video %}
-        <video class='block x project__single-image mb1' autoplay='true' loop='true' poster="{{project.image.url}}?h=500">
-          <source src="{{project.video}}" />
-        </video>
+        <div class='project__single-box rel'>
+          <span class='dots'></span>
+          {% if project.content.main.url %}<a class='abs border project__link' href='{{ project.content.main.url }}' target='_blank'>website</a>{% endif %}
+          <video class='block x project__single-image ' autoplay='true' loop='true' poster="{{project.image.url}}?h=500">
+            <source src="{{project.video}}" />
+          </video>
+        </div>
       {% else %}
-        <img class='block project__single-image x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+        <div class='project__single-box rel'>
+          <span class='dots'></span>
+
+          {% if project.content.main.url %}<a class='abs border project__link' href='{{ project.content.main.url }}' target='_blank'>website</a>{% endif %}
+          <img class='block project__single-image x' src="{{project.image.url}}?h=500" alt="{{project.cotent.main.name}}" />
+        </div>
       {% endif %}
       <div>
         {% for screen in project.content.main.siteScreens %}
-          <img class='block project__single-image x' src="{{screen.image.url}}?w=900" alt="{{project.cotent.main.name}}" />
+          <div class='project__single-box rel'>
+            <span class='dots'></span>
+            {% if project.content.main.url %}<a class='abs border project__link' href='{{ project.content.main.url }}' target='_blank'>website</a>{% endif %}
+            <img class='block project__single-image x' src="{{screen.image.url}}?w=900" alt="{{project.cotent.main.name}}" />
+          </div>
         {% endfor %}
       </div>
     </div>

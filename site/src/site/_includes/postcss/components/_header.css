@@ -1,5 +1,7 @@
 .header {
   padding-top: 1rem;
+  width: calc(100vw - 1rem);
+  left: 0.5rem;
   ul, li {
     list-style-type: none;
     padding-left: 0;
@@ -9,5 +11,13 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  a {
+    span {
+      display: none;
+      @media (min-width: $mob) {
+        display: inline;
+      }
+    }
   }
 }

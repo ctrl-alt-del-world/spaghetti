@@ -1,5 +1,6 @@
 /* breakpoints for media queries */
 $narrow: 400px;
+$mob: 600px;
 $mid: 740px;
 $wide: 1000px;
 $large: 1400px;

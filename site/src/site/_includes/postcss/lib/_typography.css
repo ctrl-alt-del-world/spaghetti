@@ -66,6 +66,9 @@ h2, .h2 , h1 {
   @media (min-width: $mid) {
     font-size: 24px;
   }
+  .border {
+    padding: 8px 10px 0;
+  }
 }
 
 .subtitle {

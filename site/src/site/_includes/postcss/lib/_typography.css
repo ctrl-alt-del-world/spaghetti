@@ -3,9 +3,9 @@
 
 
 @font-face {
-  font-family: 'hanumanregular';
-  src: url('/images/fonts/hanuman-regular-webfont.woff2') format('woff2'),
-       url('/images/fonts/hanuman-regular-webfont.woff') format('woff');
+  font-family: 'spaghettiregular';
+  src: url('/fonts/spaghetti-regular-webfont.woff2') format('woff2'),
+       url('/fonts/spaghetti-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -50,7 +50,7 @@ h2, .h2 , h1 {
   margin: 10px 0;
   font-weight: 400;
   letter-spacing: 0.05rem;
-  font-family: 'hanumanregular';
+  font-family: 'spaghettiregular';
   @media (min-width: $mid) {
     font-size: 60px;
   }
@@ -61,7 +61,7 @@ h2, .h2 , h1 {
 }
 
 .h3 {
-  font-family: 'hanumanregular';
+  font-family: 'spaghettiregular';
   font-size: 18px;
   @media (min-width: $mid) {
     font-size: 24px;

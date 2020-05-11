@@ -12,10 +12,15 @@
     input {
       border: none;
       color: currentColor;
-      width: 70%;
+      width: 100%;
+      margin-bottom: 20px;
       border-bottom: 1px solid currentColor;
       &::placeholder {
         color: currentcolor;
+      }
+      @media (min-width: $mob) {
+        margin-bottom: 0px;
+        width: 70%;
       }
     }
     button {

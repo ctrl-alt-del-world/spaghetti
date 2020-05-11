@@ -114,6 +114,15 @@ a {
   }
 }
 
+.s24 {
+  font-size: 18px;
+  line-height: 28px;
+  @media (min-width: $mid) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
 .underline-hover {
   &:hover {
     text-decoration: underline;

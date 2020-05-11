@@ -30,8 +30,40 @@
       }
     }
   }
+  &__download {
+    left: 50%;
+    top: -140px;
+    width: 200px;
+    transform: translateX(-50%);
+    svg {
+      width: 100%;
+    }
+    @media (min-width: $mid) {
+      width: 260px;
+    }
+  }
+  &--text {
+    width: 60%;
+    left: 20%;
+    margin: 0 auto;
+    top: 10px;
+  }
+  &__shape {
+    animation: spin 30s infinite linear;
+  }
+  margin-top: 7rem;
+  padding-top: 6rem;
+  @media (min-width: $mid) {
+    margin-top: 10rem;
+    padding-top: 5rem;
+  }
 }
 
 .hidden {
   display: none;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }

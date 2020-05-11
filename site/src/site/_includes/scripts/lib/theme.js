@@ -43,6 +43,20 @@ export default component((node) => {
         background-color: ${inputLite.value};
         color: ${inputDark.value};
       }
+      .footer--text {
+        color: ${inputDark.value};
+      }
+      .footer__shape {
+        stroke: ${inputDark.value};
+      }
+
+      .footer__download:hover .footer--text {
+        color: ${inputLite.value};
+      }
+      .footer__download:hover .footer__shape {
+        stroke: ${inputLite.value};
+        color: ${inputDark.value};
+      }
       body button {
         color: ${inputDark.value};
         border-color: ${inputDark.value};

@@ -127,6 +127,23 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &.h2 {
+    text-decoration: none;
+    &:hover {
+      &:after {
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: currentColor;
+        content: '';
+        @media (min-width: $mid) {
+          height: 6px;
+        }
+      }
+    }
+  }
 }
 
 p {

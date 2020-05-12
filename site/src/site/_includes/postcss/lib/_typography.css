@@ -67,7 +67,10 @@ h2, .h2 , h1 {
     font-size: 24px;
   }
   .border {
-    padding: 8px 10px 0;
+    padding: 6px 10px 5px;
+    text-transform: uppercase;
+    font-family: 'space mono';
+    font-size: 22px;
   }
 }
 

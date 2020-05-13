@@ -70,6 +70,7 @@ module.exports = function(config) {
   config.addPassthroughCopy("./src/site/images");
   config.addPassthroughCopy("./src/site/fonts");
   config.addPassthroughCopy("./src/site/downloads");
+  config.addPassthroughCopy("./src/site/scripts");
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;

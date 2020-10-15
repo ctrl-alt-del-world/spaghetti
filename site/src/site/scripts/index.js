@@ -215,9 +215,15 @@ document.addEventListener('DOMContentLoaded', function (e) {
   window.__app = _app_js__WEBPACK_IMPORTED_MODULE_0__["default"];
 });
 router.on('after', function (_ref) {
-  var title = _ref.title,
-      location = _ref.location;
-  document.title = title;
+  var location = _ref.location;
+  var title = document.querySelector('.js-title');
+  var pageTitle = "";
+
+  if (title) {
+    pageTitle = "".concat(title.getAttribute('data-title'), " | ");
+  }
+
+  document.title = pageTitle + "Spaghetti Directory";
   window.history.pushState({}, '', location);
   _app_js__WEBPACK_IMPORTED_MODULE_0__["default"].mount();
 });

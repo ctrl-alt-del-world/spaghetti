@@ -9,6 +9,8 @@ pagination:
 ---
 
 <div class='projects mt1 pt1 fw f jcb aic'>
+
+  <div class='hidden js-title' data-title='Websites'></div>
   {%- for project in pagination.items %}
     <div class='projects--single mb1 x col-4'>
       <a class='projects--single_image block x ba' href='/projects/{{ project.content.main.slug.current | slug }}/'>

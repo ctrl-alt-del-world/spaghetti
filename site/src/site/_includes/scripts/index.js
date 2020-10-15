@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', e => {
   window.__app = app
 })
 
-router.on('after', ({ title, location }) => {
-  document.title = title
+router.on('after', ({ location }) => {
+  const title = document.querySelector('.js-title')
+  let pageTitle = ``
+  if (title) {
+    pageTitle = `${title.getAttribute('data-title')} | `
+  }
+  document.title = pageTitle + `Spaghetti Directory`
   window.history.pushState({}, '', location)
   app.mount()
 })

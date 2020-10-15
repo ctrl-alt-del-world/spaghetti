@@ -8,6 +8,7 @@ renderData:
 {% set title = project.content.main.name %}
 
 <div class='mt1 pt1'>
+  <div class='hidden js-title' data-title='{{title}}'></div>
   <h1>{{ title }} {% if project.content.main.url %}<a class='' href='{{ project.content.main.url }}' target='_blank'>⬀</a>{% endif %}</h1>
   <div class='project__flex f fw jcb ais x'>
     <div class='project__info x mb1 al'>

@@ -8,6 +8,7 @@ renderData:
 {% set title = user.content.main.name %}
 
 <div class='mt1 user pt1'>
+  <div class='hidden js-title' data-title='{{title}}'></div>
   <div class='ac'>
     <h1 class='caps'>{{ title }}</h1>
     {% if user.content.main.url %}<a class='border' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>website</a>{% endif %}

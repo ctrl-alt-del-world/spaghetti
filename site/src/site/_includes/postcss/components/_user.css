@@ -20,4 +20,12 @@
       }
     }
   }
+  &__cols {
+    @media (min-width: $mob) {
+      column-count: 2;
+    }
+    @media (min-width: $mid) {
+      column-count: 3;
+    }
+  }
 }

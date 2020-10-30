@@ -1,0 +1,18 @@
+---
+title: Spaghetti Directory
+subtitle: An interent webring for the 🍝 fam.
+layout: layouts/base.njk
+---
+
+<div class='mt1 pt1 mb1 user__cols pb1'>
+  {%- for user in humans -%}
+    <div class='row al  x mb1'>
+      {% if user.content.projects %}
+        <a class='h3 caps' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
+      {% else %}
+        <span class='h3 caps o5 inline' >{{ user.content.main.name  }}</span>
+      {% endif %}
+      {% if user.content.main.url %}<a class='external h3' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
+    </div>
+  {%- endfor -%}
+</div>s

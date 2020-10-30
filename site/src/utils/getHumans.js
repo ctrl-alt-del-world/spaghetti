@@ -2,7 +2,7 @@ const groq = require('groq')
 const client = require('./sanityClient.js')
 const BlocksToMarkdown = require('@sanity/block-content-to-markdown')
 const serializers = require('./serializers')
-const { uniqBy } = require('lodash')
+const { uniqBy, sortBy } = require('lodash')
 
 function generateUser (user) {
   let friends = []
@@ -38,8 +38,8 @@ function generateUser (user) {
 }
 
 
-async function getUsers () {
-  const filter = groq`*[_type == "user" && defined(content.projects)] {
+async function getHumans () {
+  const filter = groq`*[_type == "user"] {
     ...,
     content {
       ...,
@@ -60,8 +60,8 @@ async function getUsers () {
     }
   }`
   const docs = await client.fetch(filter).catch(err => console.error(err))
-  const users = docs.map(generateUser)
+  const users = sortBy(docs.map(generateUser), ['content.main.name'])
   return users
 }
 
-module.exports = getUsers
+module.exports = getHumans

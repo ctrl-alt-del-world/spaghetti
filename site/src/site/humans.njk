@@ -1,10 +1,11 @@
 ---
-title: Spaghetti Directory
+title: Top Chefs - Spaghetti Directory
 subtitle: An interent webring for the 🍝 fam.
 layout: layouts/base.njk
 ---
 
 <div class='mt1 pt1 mb1 user__cols pb1'>
+  <div class='hidden js-title' data-title='Top Chefs'></div>
   {%- for user in humans -%}
     <div class='row al  x mb1'>
       {% if user.content.projects %}
@@ -15,4 +16,4 @@ layout: layouts/base.njk
       {% if user.content.main.url %}<a class='external h3' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
     </div>
   {%- endfor -%}
-</div>s
+</div>

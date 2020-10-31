@@ -21,6 +21,11 @@
     }
   }
   &__cols {
+    a {
+      &:hover {
+        color: #FD4A1E;
+      }
+    }
     @media (min-width: $mob) {
       column-count: 2;
     }

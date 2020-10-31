@@ -9,7 +9,7 @@
 
 module.exports = (dateObj, format = "LLL d, y") => {
   return DateTime.fromJSDate(dateObj, {
-      zone: "utc"
+      zone: "local",
     }).toFormat(format);
 };
 

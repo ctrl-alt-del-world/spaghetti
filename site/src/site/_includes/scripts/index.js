@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', e => {
 })
 
 router.on('after', ({ location }) => {
+  window.scrollTo(0,0)
   const title = document.querySelector('.js-title')
   let pageTitle = ``
   if (title) {

@@ -26,11 +26,65 @@
         color: #FD4A1E;
       }
     }
+
+    &.identity {
+      .row {
+        display: none;
+        &.identity {
+          display: block;
+        }
+      }
+    }
+
+    &.developers {
+      .row {
+        display: none;
+        &.web-developer {
+          display: block;
+        }
+      }
+    }
+
+    &.copy {
+      .row {
+        display: none;
+        &.copywriting {
+          display: block;
+        }
+      }
+    }
+
+    &.photographers {
+      .row {
+        display: none;
+        &.photography {
+          display: block;
+        }
+ 
+      }
+    }
+
+    &.designers {
+      .row {
+        display: none;
+        &.ui-ux-designer,
+        &.identity,
+        &.print,
+        &.packaging,
+        &.ux-designer,
+        &ui-designer {
+          display: block;
+        }
+      }
+    }
     @media (min-width: $mob) {
       column-count: 2;
     }
     @media (min-width: $mid) {
       column-count: 3;
+    }
+    @media (min-width: $large) {
+      column-count: 4;
     }
   }
 }

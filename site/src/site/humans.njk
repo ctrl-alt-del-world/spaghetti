@@ -4,16 +4,39 @@ subtitle: An interent webring for the 🍝 fam.
 layout: layouts/base.njk
 ---
 
-<div class='mt1 pt1 mb1 user__cols pb1'>
-  <div class='hidden js-title' data-title='Top Chefs'></div>
-  {%- for user in humans -%}
-    <div class='row al  x mb1'>
-      {% if user.content.projects %}
-        <a class='h3 caps' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
-      {% else %}
-        <span class='h3 caps o5 inline' >{{ user.content.main.name  }}</span>
-      {% endif %}
-      {% if user.content.main.url %}<a class='external h3' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
-    </div>
-  {%- endfor -%}
+<div data-component='filters'>
+  <div className='f jcc aic mt1 pt1'>
+
+    <button data-filter='identity' class='border'>
+      <span>Branding</span>
+    </button>
+    <button data-filter='copy' class='border'>
+      <span>Copy/Strategy</span>
+    </button>
+    <button data-filter='developers' class='border'>
+      <span>Developers</span>
+    </button>
+    <button data-filter='designers' class='border'>
+      <span>Designers</span>
+    </button>
+    <button data-filter='photographers' class='border'>
+      <span>Photographers</span>
+    </button>
+  </div>
+
+  <div class='mt1 pt1 mb1 user__cols pb1 js-users'>
+    <div class='hidden js-title' data-title='Top Chefs'></div>
+    {%- for user in humans -%}
+      <div class='row al x mb1 {% for discipline in user.content.main.discipline  %}
+        {{ discipline }}
+      {% endfor %}'>
+        {% if user.content.projects %}
+          <a class='h3 caps' href='/users/{{ user.content.main.slug.current | slug }}/'>{{ user.content.main.name  }}</a>
+        {% else %}
+          <span class='h3 caps o5 inline' >{{ user.content.main.name  }}</span>
+        {% endif %}
+        {% if user.content.main.url %}<a class='external h3' rel='noopener' href='{{ user.content.main.url }}' target='_blank'>⬀</a>{% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
 </div>

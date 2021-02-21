@@ -179,6 +179,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_image_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/image.js */ "./src/site/_includes/scripts/lib/image.js");
 /* harmony import */ var _lib_theme_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/theme.js */ "./src/site/_includes/scripts/lib/theme.js");
 /* harmony import */ var _lib_form_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/form.js */ "./src/site/_includes/scripts/lib/form.js");
+/* harmony import */ var _lib_filters_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/filters.js */ "./src/site/_includes/scripts/lib/filters.js");
+
 
 
 
@@ -189,6 +191,7 @@ var state = {
 var components = {
   image: _lib_image_js__WEBPACK_IMPORTED_MODULE_1__["default"],
   theme: _lib_theme_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+  filters: _lib_filters_js__WEBPACK_IMPORTED_MODULE_4__["default"],
   form: _lib_form_js__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(picoapp__WEBPACK_IMPORTED_MODULE_0__["picoapp"])(components, state));
@@ -216,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 });
 router.on('after', function (_ref) {
   var location = _ref.location;
+  window.scrollTo(0, 0);
   var title = document.querySelector('.js-title');
   var pageTitle = "";
 
@@ -227,6 +231,31 @@ router.on('after', function (_ref) {
   window.history.pushState({}, '', location);
   _app_js__WEBPACK_IMPORTED_MODULE_0__["default"].mount();
 });
+
+/***/ }),
+
+/***/ "./src/site/_includes/scripts/lib/filters.js":
+/*!***************************************************!*\
+  !*** ./src/site/_includes/scripts/lib/filters.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var picoapp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! picoapp */ "./node_modules/picoapp/dist/picoapp.es.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(picoapp__WEBPACK_IMPORTED_MODULE_0__["component"])(function (node) {
+  var buttons = node.querySelectorAll('[data-filter]');
+  var userCols = node.querySelector('.js-users');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var type = button.getAttribute('data-filter');
+      button.classList.toggle('active');
+      userCols.classList.toggle(type);
+    });
+  });
+}));
 
 /***/ }),
 
